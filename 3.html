@@ -4,40 +4,40 @@
     <title>WEB1 - javascript</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script>
+        function dark_mode(self) {
+            var body = document.querySelector('body')
+            var alist = document.querySelectorAll('a')
+            if (self.value === 'night') {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+                self.value = 'day';
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = 'white';
+                    i = i + 1;
+                }
+            } else {
+                body.style.backgroundColor = 'white';
+                body.style.color = 'black';
+                self.value = 'night';
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = 'black';
+                    i = i + 1;
+                }
+            }
+        }
+    </script>
 </head>
-
 <body>
     <h1><a href="index.html">WEB</a></h1>
-    <script>
-        var dark_button = document.querySelector('body');
-        dark_button.value = 'day';
-    </script>
-    <input type="button" value="night" onclick="
-        if (dark_button.value === 'day') {
-            dark_button.style.backgroundColor = 'black';
-            dark_button.style.color = 'white';
-            document.querySelector('body h1 a').style.color = 'white';
-            document.querySelectorAll('#grid .list')[0].style.color = 'white';
-            document.querySelectorAll('#grid .list')[1].style.color = 'white';
-            document.querySelectorAll('#grid .list')[2].style.color = 'white';
-            dark_button.value = 'night';
-            document.querySelector('body input').value = 'day';
-        } else {
-            dark_button.style.backgroundColor = 'white';
-            dark_button.style.color = 'black';
-            document.querySelector('body h1 a').style.color = 'black';
-            document.querySelectorAll('#grid .list')[0].style.color = 'black';
-            document.querySelectorAll('#grid .list')[1].style.color = 'black';
-            document.querySelectorAll('#grid .list')[2].style.color = 'black';
-            dark_button.value = 'day';
-            document.querySelector('body input').value = 'night';
-        }
-    ">
+    <input type="button" value="night" onclick="dark_mode(this)">
     <div id="grid">
         <ol>
-            <li><a class="list" href="1.html">HTML</a></li>
-            <li><a class="list" href="2.html">CSS</a></li>
-            <li><a class="list" href="3.html">JaveScript</a></li>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JaveScript</a></li>
         </ol>
         <div id="article">
             <h2>JavaScript</h2>
