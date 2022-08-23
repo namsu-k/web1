@@ -37,3 +37,12 @@ h1 {
         border-bottom: none;
     }
 }
+
+#button {
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    width: 100px;
+    margin: 0;
+    padding: 20px;
+    padding-left: 33px;
+}
