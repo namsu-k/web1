@@ -38,7 +38,7 @@ h1 {
     }
 }
 
-#button {
+/* #button {
     border-right: 1px solid gray;
     border-bottom: 1px solid gray;
     width: 100px;
@@ -48,4 +48,10 @@ h1 {
 
 #button input {
     width: 100px;
+} */
+
+input {
+    display: block;
+    width: 154px;
+    /* margin-left: 26.5px; */
 }
