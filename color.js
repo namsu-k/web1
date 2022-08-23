@@ -24,11 +24,11 @@ function dark_mode(self) {
         body.setBGColor("black");
         body.setColor("white");
         self.value = 'day';
-        links.setColor("white");
+        links.setColor("cornflowerblue");
     } else {
         body.setBGColor("white");
         body.setColor("black");
         self.value = 'night';
-        links.setColor('black');
+        links.setColor('lightsalmon');
     }
 }
