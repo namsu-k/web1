@@ -5,27 +5,35 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <script>
+        var body = {
+            setColor : function (color) {
+                document.querySelector('body').style.color = color;
+            },
+            setBGColor : function (color) {
+                document.querySelector('body').style.backgroundColor = color;
+            }
+        }
+        var links = {
+            setColor : function (color) {
+                var alist = document.querySelectorAll('a')
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = color;
+                    i = i + 1;
+                }
+            }
+        }
         function dark_mode(self) {
-            var body = document.querySelector('body')
-            var alist = document.querySelectorAll('a')
             if (self.value === 'night') {
-                body.style.backgroundColor = 'black';
-                body.style.color = 'white';
+                body.setBGColor("black");
+                body.setColor("white");
                 self.value = 'day';
-                var i = 0;
-                while (i < alist.length) {
-                    alist[i].style.color = 'white';
-                    i = i + 1;
-                }
+                links.setColor("white");
             } else {
-                body.style.backgroundColor = 'white';
-                body.style.color = 'black';
+                body.setBGColor("white");
+                body.setColor("black");
                 self.value = 'night';
-                var i = 0;
-                while (i < alist.length) {
-                    alist[i].style.color = 'black';
-                    i = i + 1;
-                }
+                links.setColor('black');
             }
         }
     </script>

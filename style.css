@@ -53,5 +53,8 @@ h1 {
 input {
     display: block;
     width: 154px;
+    padding: 0;
+    border: 1px solid gray;
+    border-top: none;
     /* margin-left: 26.5px; */
 }
